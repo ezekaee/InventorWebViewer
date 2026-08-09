@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Addin Type="Standard">
+  <ClassId>{B7E8F901-2345-6789-ABCD-EF0123456789}</ClassId>
+  <ClientId>{B7E8F901-2345-6789-ABCD-EF0123456789}</ClientId>
+  <DisplayName>Inventor Web 3D Viewer</DisplayName>
+  <Description>Export assembly to interactive HTML 3D viewer with design tree, measure, and navigation.</Description>
+  <Assembly>InventorWebViewer.dll</Assembly>
+  <LoadOnStartUp>1</LoadOnStartUp>
+  <LoadOnCommandInvocation>0</LoadOnCommandInvocation>
+  <SupportedSoftwareVersionGreaterThan>28..</SupportedSoftwareVersionGreaterThan>
+</Addin>

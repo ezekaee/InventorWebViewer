@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>InventorWebViewer</RootNamespace>
+    <AssemblyName>InventorWebViewer</AssemblyName>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <InventorInteropPath Condition="'$(InventorInteropPath)' == '' and Exists('C:\Program Files\Autodesk\Inventor 2026\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll')">C:\Program Files\Autodesk\Inventor 2026\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</InventorInteropPath>
+    <InventorInteropPath Condition="'$(InventorInteropPath)' == '' and Exists('C:\Program Files\Autodesk\Inventor 2025\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll')">C:\Program Files\Autodesk\Inventor 2025\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</InventorInteropPath>
+    <InventorInteropPath Condition="'$(InventorInteropPath)' == '' and Exists('C:\Program Files\Autodesk\Inventor 2024\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll')">C:\Program Files\Autodesk\Inventor 2024\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</InventorInteropPath>
+    <InventorInteropPath Condition="'$(InventorInteropPath)' == '' and Exists('C:\Program Files\Autodesk\Inventor 2023\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll')">C:\Program Files\Autodesk\Inventor 2023\Bin\Public Assemblies\Autodesk.Inventor.Interop.dll</InventorInteropPath>
+    <InventorInteropPath Condition="'$(InventorInteropPath)' == '' and Exists('$(MSBuildProjectDirectory)\Lib\Autodesk.Inventor.Interop.dll')">$(MSBuildProjectDirectory)\Lib\Autodesk.Inventor.Interop.dll</InventorInteropPath>
+  </PropertyGroup>
+
+  <Target Name="CheckInventorInterop" BeforeTargets="ResolveAssemblyReferences">
+    <Error
+      Condition="'$(InventorInteropPath)' == '' or !Exists('$(InventorInteropPath)')"
+      Text="Autodesk.Inventor.Interop.dll not found. Install Inventor or copy Interop DLL to Lib\ folder." />
+    <Message Importance="high" Text="Using Inventor Interop: $(InventorInteropPath)" Condition="Exists('$(InventorInteropPath)')" />
+  </Target>
+
+  <ItemGroup>
+    <Reference Include="Autodesk.Inventor.Interop">
+      <HintPath>$(InventorInteropPath)</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <!-- SDK already includes *.resx as EmbeddedResource automatically.
+       Only UPDATE metadata — do NOT re-Include or you get duplicate items. -->
+  <ItemGroup>
+    <EmbeddedResource Update="Localization\Resources.resx">
+      <LogicalName>InventorWebViewer.Localization.Resources.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localization\Resources.fa.resx">
+      <LogicalName>InventorWebViewer.Localization.Resources.fa.resources</LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <Target Name="CopyToBundle" AfterTargets="Build">
+    <PropertyGroup>
+      <BundleContents>$(MSBuildProjectDirectory)\..\InventorWebViewer.bundle\Contents</BundleContents>
+    </PropertyGroup>
+    <MakeDir Directories="$(BundleContents)" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BundleContents)" SkipUnchangedFiles="true" />
+    <Message Importance="high" Text="Copied $(TargetFileName) to $(BundleContents)" />
+  </Target>
+
+</Project>

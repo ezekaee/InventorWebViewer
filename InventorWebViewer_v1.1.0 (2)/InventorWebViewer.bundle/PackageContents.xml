@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ApplicationPackage SchemaVersion="1.0" AutodeskProduct="Inventor" ProductType="Application" Name="Inventor Web 3D Viewer" Description="Export assemblies to interactive HTML Three.js viewer" Author="Your Company" AppVersion="1.1.0" ProductCode="{B7E8F901-2345-6789-ABCD-EF0123456789}" UpgradeCode="{B7E8F901-2345-6789-ABCD-EF0123456789}">
+  <CompanyDetails Name="Your Company" Url="https://www.linkedin.com" Email="support@example.com" />
+  <RuntimeRequirements OS="Win64" Platform="Inventor" SeriesMin="29.0" />
+  <Components Description="Inventor Web 3D Viewer">
+    <RuntimeRequirements OS="Win64" Platform="Inventor" SeriesMin="29.0" />
+    <ComponentEntry AppName="InventorWebViewer" ModuleName="./Contents/InventorWebViewer.dll" AppDescription="Web 3D Viewer add-in" LoadOnAppearance="True" LoadOnCommandInvocation="False" LoadOnAutoCADStartup="False">
+      <Commands GroupName="Web3DViewer">
+        <Command Global="True" CommandId="InventorWebViewer:ExportHtml" />
+      </Commands>
+    </ComponentEntry>
+  </Components>
+</ApplicationPackage>

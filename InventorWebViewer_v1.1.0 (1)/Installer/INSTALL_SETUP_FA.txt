@@ -1,0 +1,96 @@
+═══════════════════════════════════════════════════════════
+  ساخت و نصب Setup با Inno Setup — Inventor Web 3D Viewer
+═══════════════════════════════════════════════════════════
+
+پیش‌نیازها
+----------
+• Windows 10/11 x64
+• Visual Studio 2022 (برای Build افزونه)
+• Autodesk Inventor 2025+ (برای اجرا)
+• Inno Setup 6  →  https://jrsoftware.org/isdl.php
+  (نسخه Unicode / Inno Setup 6 را نصب کنید)
+
+
+گام ۱ — Build افزونه
+--------------------
+1. فایل InventorWebViewer.sln را در Visual Studio باز کنید
+2. Configuration را روی Release بگذارید
+3. Platform را x64 کنید (یا AnyCPU با PlatformTarget=x64 در csproj)
+4. منوی Build → Rebuild Solution
+5. خروجی: InventorWebViewer\bin\Release\InventorWebViewer.dll
+
+
+گام ۲ — آماده‌سازی bundle
+-------------------------
+روش الف (ساده):
+  دوبارکلیک روی:
+    Installer\prepare_setup.bat
+  این اسکریپت DLL را در
+    InventorWebViewer.bundle\Contents\
+  کپی می‌کند.
+
+روش ب (دستی):
+  InventorWebViewer.dll را کپی کنید به:
+    InventorWebViewer.bundle\Contents\InventorWebViewer.dll
+
+ساختار نهایی باید چنین باشد:
+  InventorWebViewer.bundle\
+    PackageContents.xml
+    Contents\
+      InventorWebViewer.addin
+      InventorWebViewer.dll
+
+
+گام ۳ — کامپایل Setup با Inno Setup
+------------------------------------
+1. برنامه "Inno Setup Compiler" را باز کنید
+2. File → Open → انتخاب کنید:
+     Installer\InventorWebViewer.iss
+3. Build → Compile   (یا کلید Ctrl+F9)
+4. اگر DLL نباشد، Setup خطا می‌دهد و متوقف می‌شود
+5. فایل نهایی ساخته می‌شود در:
+     Installer\Output\InventorWebViewer_Setup_1.1.0.exe
+
+
+گام ۴ — نصب روی سیستم کاربر
+-----------------------------
+1. Inventor را کامل ببندید
+2. InventorWebViewer_Setup_1.1.0.exe را به‌عنوان Administrator اجرا کنید
+3. Next → Install → Finish
+4. مسیر نصب خودکار:
+     C:\ProgramData\Autodesk\ApplicationPlugins\InventorWebViewer.bundle\
+5. Inventor را باز کنید
+6. یک اسمبلی باز کنید
+7. در Ribbon تب  "Web 3D Viewer"  را ببینید
+
+
+حذف نصب (Uninstall)
+-------------------
+• Control Panel → Programs → Inventor Web 3D Viewer → Uninstall
+• یا از منوی Start → Inventor Web 3D Viewer → Uninstall
+
+
+عیب‌یابی
+--------
+• تب Ribbon دیده نمی‌شود
+    – Inventor را کامل ببندید و دوباره باز کنید
+    – مسیر ProgramData\...\ApplicationPlugins را چک کنید
+    – فایل log:
+        %AppData%\InventorWebViewer\addin_load.log
+
+• خطای "DLL not found" هنگام Compile
+    – ابتدا Build کنید، سپس prepare_setup.bat
+
+• Inventor پیدا نشد
+    – نصب‌کننده فقط هشدار می‌دهد؛ می‌توانید Continue کنید
+
+• نیاز به اینترنت در Viewer
+    – فقط برای CDN مربوط به Three.js؛ مدل داخل HTML جاسازی شده است
+
+
+توزیع
+-----
+فقط فایل
+  InventorWebViewer_Setup_1.1.0.exe
+را برای کاربر نهایی بفرستید.
+نیازی به Visual Studio یا سورس روی سیستم کاربر نیست.

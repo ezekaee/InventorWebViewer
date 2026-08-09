@@ -1,0 +1,53 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\System path\\Desktop\\InventorWebViewer\\InventorWebViewer_FREE_updated__grk_\\InventorWebViewer\\InventorWebViewer.csproj": {}
+  },
+  "projects": {
+    "D:\\System path\\Desktop\\InventorWebViewer\\InventorWebViewer_FREE_updated__grk_\\InventorWebViewer\\InventorWebViewer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\System path\\Desktop\\InventorWebViewer\\InventorWebViewer_FREE_updated__grk_\\InventorWebViewer\\InventorWebViewer.csproj",
+        "projectName": "InventorWebViewer",
+        "projectPath": "D:\\System path\\Desktop\\InventorWebViewer\\InventorWebViewer_FREE_updated__grk_\\InventorWebViewer\\InventorWebViewer.csproj",
+        "packagesPath": "C:\\Users\\zokaei.VFB-CO\\.nuget\\packages\\",
+        "outputPath": "D:\\System path\\Desktop\\InventorWebViewer\\InventorWebViewer_FREE_updated__grk_\\InventorWebViewer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\zokaei.VFB-CO\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.315\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

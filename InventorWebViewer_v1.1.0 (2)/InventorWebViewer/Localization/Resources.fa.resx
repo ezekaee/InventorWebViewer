@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Title_Main"><value>نمایشگر سه‌بعدی وب Inventor</value></data>
+  <data name="Title_Error"><value>خطا</value></data>
+  <data name="Title_Settings"><value>تنظیمات</value></data>
+  <data name="Title_About"><value>درباره</value></data>
+  <data name="Btn_Export"><value>خروجی به نمایشگر HTML</value></data>
+  <data name="Btn_Settings"><value>تنظیمات</value></data>
+  <data name="Btn_About"><value>درباره</value></data>
+  <data name="Btn_Close"><value>بستن</value></data>
+  <data name="Btn_Save"><value>ذخیره</value></data>
+  <data name="Btn_Cancel"><value>انصراف</value></data>
+  <data name="Btn_OpenFolder"><value>باز کردن پوشه خروجی</value></data>
+  <data name="Lbl_Assembly"><value>اسمبلی:</value></data>
+  <data name="Lbl_UpAxis"><value>محور بالا:</value></data>
+  <data name="Lbl_Output"><value>پوشه خروجی:</value></data>
+  <data name="Lbl_Tolerance"><value>تلرانس مش cm (بیشتر = فایل کوچک‌تر):</value></data>
+  <data name="Lbl_Progress"><value>پیشرفت:</value></data>
+  <data name="Lbl_Log"><value>گزارش</value></data>
+  <data name="Lbl_Language"><value>Language / زبان:</value></data>
+  <data name="Lbl_LinkedIn"><value>آدرس LinkedIn:</value></data>
+  <data name="Lbl_WhatsApp"><value>شماره واتساپ (بدون +):</value></data>
+  <data name="Lbl_WhatsAppMsg"><value>پیام پیش‌فرض واتساپ:</value></data>
+  <data name="Chk_OpenBrowser"><value>باز کردن مرورگر پس از خروجی</value></data>
+  <data name="Msg_NeedAssembly"><value>لطفاً ابتدا یک اسمبلی بالادست یا یک فایل پارت باز کنید.</value></data>
+  <data name="Msg_Done"><value>خروجی تمام شد. نمایشگر آماده است.</value></data>
+  <data name="Msg_Exporting"><value>در حال خروجی هندسه و ساخت نمایشگر HTML...</value></data>
+  <data name="About_Text"><value>نمایشگر سه‌بعدی وب Inventor نسخه ۱.۱ — رایگان
+
+اسمبلی را به نمایشگر HTML + Three.js تبدیل می‌کند.
+این نرم‌افزار رایگان است.
+من را در شبکه‌های اجتماعی حمایت کنید!
+
+تماس:
+LinkedIn: linkedin.com/in/zekaee
+ایمیل: e.zekaee.b@gmail.com
+واتساپ: +۹۸ ۹۳۰ ۵۷۴ ۱۷۴۰</value></data>
+  <data name="Panel_Name"><value>نمایشگر وب ۳بعدی</value></data>
+  <data name="Tooltip_Export"><value>خروجی اسمبلی به نمایشگر تعاملی HTML سه‌بعدی</value></data>
+  <data name="Axis_Z"><value>+Z بالا (پیش‌فرض CAD)</value></data>
+  <data name="Axis_Y"><value>+Y بالا (glTF / بسیاری موتورها)</value></data>
+  <data name="Axis_X"><value>+X بالا</value></data>
+  <data name="Axis_NegZ"><value>-Z بالا</value></data>
+  <data name="Axis_NegY"><value>-Y بالا</value></data>
+  <data name="Axis_NegX"><value>-X بالا</value></data>
+</root>

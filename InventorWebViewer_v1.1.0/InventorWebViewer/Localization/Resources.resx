@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Title_Main"><value>Inventor Web 3D Viewer</value></data>
+  <data name="Title_Error"><value>Error</value></data>
+  <data name="Title_Settings"><value>Settings</value></data>
+  <data name="Title_About"><value>About</value></data>
+  <data name="Btn_Export"><value>Export to HTML Viewer</value></data>
+  <data name="Btn_Settings"><value>Settings</value></data>
+  <data name="Btn_About"><value>About</value></data>
+  <data name="Btn_Close"><value>Close</value></data>
+  <data name="Btn_Save"><value>Save</value></data>
+  <data name="Btn_Cancel"><value>Cancel</value></data>
+  <data name="Btn_OpenFolder"><value>Open Output Folder</value></data>
+  <data name="Lbl_Assembly"><value>Assembly:</value></data>
+  <data name="Lbl_UpAxis"><value>Up axis:</value></data>
+  <data name="Lbl_Output"><value>Output folder:</value></data>
+  <data name="Lbl_Tolerance"><value>Mesh tolerance cm (higher = smaller file):</value></data>
+  <data name="Lbl_Progress"><value>Progress:</value></data>
+  <data name="Lbl_Log"><value>Log</value></data>
+  <data name="Lbl_Language"><value>Language / زبان:</value></data>
+  <data name="Lbl_LinkedIn"><value>LinkedIn URL:</value></data>
+  <data name="Lbl_WhatsApp"><value>WhatsApp number (no +):</value></data>
+  <data name="Lbl_WhatsAppMsg"><value>WhatsApp preset message:</value></data>
+  <data name="Chk_OpenBrowser"><value>Open browser after export</value></data>
+  <data name="Msg_NeedAssembly"><value>Please open a top-level assembly or a part document first.</value></data>
+  <data name="Msg_Done"><value>Export finished. Viewer is ready.</value></data>
+  <data name="Msg_Exporting"><value>Exporting geometry and building HTML viewer...</value></data>
+  <data name="About_Text"><value>Inventor Web 3D Viewer v1.1 — FREE
+
+Exports assembly to HTML + Three.js viewer.
+This software is free to use and distribute.
+Support me on social media!
+
+Contact:
+LinkedIn: linkedin.com/in/zekaee
+Email: e.zekaee.b@gmail.com
+WhatsApp: +98 930 574 1740</value></data>
+  <data name="Panel_Name"><value>Web 3D Viewer</value></data>
+  <data name="Tooltip_Export"><value>Export assembly to interactive HTML 3D viewer</value></data>
+  <data name="Axis_Z"><value>+Z Up (default CAD)</value></data>
+  <data name="Axis_Y"><value>+Y Up (glTF / many engines)</value></data>
+  <data name="Axis_X"><value>+X Up</value></data>
+  <data name="Axis_NegZ"><value>-Z Up</value></data>
+  <data name="Axis_NegY"><value>-Y Up</value></data>
+  <data name="Axis_NegX"><value>-X Up</value></data>
+</root>

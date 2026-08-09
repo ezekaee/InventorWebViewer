@@ -1,0 +1,16 @@
+Inventor Web 3D Viewer – Bundle install
+======================================
+
+C:\ProgramData\Autodesk\ApplicationPlugins\InventorWebViewer.bundle\
+    PackageContents.xml
+    Contents\
+        InventorWebViewer.addin
+        InventorWebViewer.dll
+
+1. Build Release x64
+2. Copy DLL into bundle Contents\
+3. Copy whole .bundle folder to ApplicationPlugins
+4. Restart Inventor
+
+Ribbon tab: Web 3D Viewer
+Log: %AppData%\InventorWebViewer\addin_load.log
